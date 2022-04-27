@@ -16,9 +16,4 @@ def articles_list(request):
         object_list.append({'article': article, 'tag': tags})
 
     context = {'object_list' : object_list}
-    print(object_list)
-    print()
-    print()
-    for i in object_list[0]['tag']:
-        print(i.scope)
     return render(request, template, context)
